@@ -160,25 +160,124 @@ class _HeaderWavePainter extends CustomPainter {
     final lapiz2 = Paint()..strokeCap = StrokeCap.round;
 
     // Propiedades
-    lapiz2.color = Colors.yellow; //Colors.yellow; //Color(0xff006bff);
-    lapiz2.style = PaintingStyle.stroke; //.fill rellenar
+    lapiz2.color = Color(0xff006bff); //Colors.yellow; //Color(0xff006bff);
+    lapiz2.style = PaintingStyle.fill; //.fill rellenar
     lapiz2.strokeWidth = 3;
 
     final path2 = new Path();
-    path2.moveTo(size.width * 0.61, size.height * 0.04);
-    path2.quadraticBezierTo(
-      size.width * 0.62,
-      size.height * 0.02,
-      size.width * 0.65,
-      size.height * 0.04,
+    path2.moveTo(size.width * 0.08, size.height * 0.48);
+
+    path2.cubicTo(
+      size.width * 0.08,
+      size.height * 0.46,
+      size.width * 0.15,
+      size.height * 0.43,
+      size.width * 0.15,
+      size.height * 0.48,
     );
-    path2.quadraticBezierTo(
-      size.width * 0.64,
-      size.height * 0.06,
-      size.width * 0.61,
-      size.height * 0.04,
+
+    path2.cubicTo(
+      size.width * 0.15,
+      size.height * 0.49,
+      size.width * 0.10,
+      size.height * 0.51,
+      size.width * 0.08,
+      size.height * 0.48,
     );
+
     canvas.drawPath(path2, lapiz2);
+
+    final lapiz3 = Paint()..strokeCap = StrokeCap.round;
+
+    // Propiedades
+    lapiz3.color = Color(0xff006bff); //Colors.yellow; //Color(0xff006bff);
+    lapiz3.style = PaintingStyle.fill; //.fill rellenar
+    lapiz3.strokeWidth = 3;
+
+    final path3 = new Path();
+    path3.moveTo(size.width * 0.68, size.height * 0.59);
+    path3.cubicTo(
+      size.width * 0.69,
+      size.height * 0.54,
+      size.width * 0.88,
+      size.height * 0.55,
+      size.width * 0.86,
+      size.height * 0.59,
+    );
+    path3.cubicTo(
+      size.width * 0.85,
+      size.height * 0.63,
+      size.width * 0.68,
+      size.height * 0.62,
+      size.width * 0.68,
+      size.height * 0.59,
+    );
+    // path3.close();
+    canvas.drawPath(path3, lapiz3);
+
+    final lapiz4 = Paint()..strokeCap = StrokeCap.round;
+
+    // Propiedades
+    lapiz4.color = Color(0xff0059d4); //Colors.yellow; //Color(0xff006bff);
+    lapiz4.style = PaintingStyle.fill; //.fill rellenar
+    lapiz4.strokeWidth = 3;
+
+    final path4 = new Path();
+    path4.moveTo(size.width * 0.55, size.height * 0.38);
+    path4.cubicTo(
+      size.width * 0.57,
+      size.height * 0.32,
+      size.width * 0.69,
+      size.height * 0.32,
+      size.width * 0.70,
+      size.height * 0.39,
+    );
+    path4.cubicTo(
+      size.width * 0.70,
+      size.height * 0.45,
+      size.width * 0.55,
+      size.height * 0.42,
+      size.width * 0.55,
+      size.height * 0.38,
+    );
+    // path4.cubicTo(
+    //   size.width * 0.85,
+    //   size.height * 0.63,
+    //   size.width * 0.68,
+    //   size.height * 0.62,
+    //   size.width * 0.68,
+    //   size.height * 0.59,
+    // );
+    // path4.close();
+    canvas.drawPath(path4, lapiz4);
+
+    final lapiz5 = Paint()..strokeCap = StrokeCap.round;
+
+    // Propiedades
+    lapiz5.color = Color(0xff006bff); //Colors.yellow; //Color(0xff006bff);
+    lapiz5.style = PaintingStyle.fill; //.fill rellenar
+    lapiz5.strokeWidth = 3;
+
+    final path5 = new Path();
+    path5.moveTo(size.width * 0.71, size.height * 0.12);
+    path5.cubicTo(
+      size.width * 0.76,
+      size.height * 0.05,
+      size.width * 0.93,
+      size.height * 0.05,
+      size.width * 0.91,
+      size.height * 0.15,
+    );
+    path5.cubicTo(
+      size.width * 0.90,
+      size.height * 0.22,
+      size.width * 0.68,
+      size.height * 0.18,
+      size.width * 0.71,
+      size.height * 0.12,
+    );
+    path5.close();
+    canvas.drawPath(path5, lapiz5);
   }
 
   @override
