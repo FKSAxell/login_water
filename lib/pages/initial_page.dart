@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_water/widgets/custom_button_widget.dart';
 
 class InitialPage extends StatelessWidget {
   @override
@@ -50,39 +51,22 @@ class InitialPage extends StatelessWidget {
                   ),
                 ),
               ),
-              MaterialButton(
-                splashColor: Colors.transparent,
+              CustomButton(
+                text: 'Log in',
+                textColor: Color(0xff006bff),
                 color: Colors.white,
-                minWidth: size.width - 80,
-                height: 45,
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(6),
-                ),
-                child: Text(
-                  'Log in',
-                  style: TextStyle(color: Color(0xff006bff), fontSize: 18),
-                ),
                 onPressed: () {},
+                side: BorderSide.none,
               ),
               SizedBox(
                 height: 10,
               ),
-              MaterialButton(
-                splashColor: Colors.transparent,
+              CustomButton(
+                text: 'Sign up',
+                textColor: Colors.white,
                 color: Color(0xff006bff),
-                minWidth: size.width - 80,
-                height: 45,
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(6),
-                  side: BorderSide(color: Colors.white),
-                ),
-                child: Text(
-                  'Sign up',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
                 onPressed: () {},
+                side: BorderSide(color: Colors.white),
               ),
               SizedBox(
                 height: 20,

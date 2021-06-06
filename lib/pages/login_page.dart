@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_water/widgets/custom_button_widget.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -13,73 +14,51 @@ class LoginPage extends StatelessWidget {
             height: double.infinity,
             width: double.infinity,
           ),
+          Positioned(
+            child: Container(
+              width: double.infinity,
+              height: size.height * 0.45,
+              color: Colors.white,
+            ),
+          ),
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Container(
-                padding: EdgeInsets.only(
-                  right: 40,
-                  left: 40,
-                  bottom: 10,
-                ),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Water delivery',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(
-                  right: 40,
-                  left: 40,
-                  bottom: 45,
-                ),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'We deliver water at any point of the Earth in 30 minutos',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-              MaterialButton(
-                splashColor: Colors.transparent,
-                color: Colors.white,
-                minWidth: size.width - 80,
-                height: 45,
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(6),
-                ),
-                child: Text(
-                  'Log in',
-                  style: TextStyle(color: Color(0xff006bff), fontSize: 18),
-                ),
-                onPressed: () {},
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              MaterialButton(
-                splashColor: Colors.transparent,
+              CustomButton(
+                text: 'Log in',
+                textColor: Colors.white,
                 color: Color(0xff006bff),
-                minWidth: size.width - 80,
-                height: 45,
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(6),
-                  side: BorderSide(color: Colors.white),
-                ),
-                child: Text(
-                  'Sign up',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
                 onPressed: () {},
+                side: BorderSide.none,
+              ),
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Divider(
+                    indent: size.width * 0.075,
+                    endIndent: size.width * 0.075,
+                    thickness: 1,
+                    color: Colors.grey,
+                    height: 50,
+                  ),
+                  Container(
+                    alignment: Alignment.topCenter,
+                    height: 20,
+                    width: 30,
+                    color: Colors.white,
+                    child: Text(
+                      "or",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  )
+                ],
+              ),
+              CustomButton(
+                text: 'Sign up',
+                textColor: Colors.grey,
+                color: Colors.white,
+                onPressed: () {},
+                side: BorderSide(color: Colors.grey),
               ),
               SizedBox(
                 height: 20,
